@@ -1,0 +1,1 @@
+The following repository ('AA-ICT5012') contains all of the code, data and results relevant to the dissertation entitled "Route Optimisation of the Public Transport Network in Malta Using Reinforcement Learning" submitted in partial fulfilment of the requirements for the degree of Master of Science in Data Science at the University of Malta.

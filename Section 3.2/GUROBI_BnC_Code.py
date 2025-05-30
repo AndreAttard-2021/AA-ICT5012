@@ -32,9 +32,9 @@ def run_gurobi_model(
     
     # Create an environment with your WLS license
     params = {
-    "WLSACCESSID": '0494f3c5-52dc-4366-b02e-19b191063953',
-    "WLSSECRET": '07772747-f91c-4066-a5ea-11ec93ecc22b',
-    "LICENSEID": 2604445,
+    "WLSACCESSID": '',
+    "WLSSECRET": '',
+    "LICENSEID": ,
     }
     env = gp.Env(params=params)
     

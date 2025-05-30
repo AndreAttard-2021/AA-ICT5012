@@ -58,3 +58,5 @@ To evaluate the model, the following command-line argument can be utilised in a 
 Note that paths should be adjusted accordingly (In addition, paths within the Python scripts being called by command-line argument need to be adjusted accordingly)
 
 All optimal routes obtained for the experiments carried out in this dissertation are saved as pickle files in the following path: 'Section 3.3/output_routes'
+
+Chapter 4 - Contains the Jupyter notebook used to calculate the metric values for the rotues used in Malta's Public Transportation system and the results obtained using the Branch and Cut algorithm.

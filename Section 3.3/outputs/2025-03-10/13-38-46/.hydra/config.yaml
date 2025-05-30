@@ -1,0 +1,44 @@
+experiment:
+  logdir: null
+  anomaly: false
+  cpu: false
+  seed: 0
+  symmetric_routes: false
+  cost_function:
+    type: mine
+    kwargs:
+      mean_stop_time_s: 0
+      avg_transfer_wait_time_s: 300
+      demand_time_weight: 0.5
+      route_time_weight: 0.5
+      constraint_violation_weight: 5.0
+      variable_weights: false
+      pp_fraction: 0.33
+      op_fraction: 0.33
+model:
+  common:
+    dropout: 0.0
+    nonlin_type: ReLU
+    embed_dim: 64
+  route_generator:
+    kwargs:
+      force_linking_unlinked: false
+      logit_clip: null
+      n_nodepair_layers: 3
+      n_pathscorer_layers: 3
+      pathscorer_hidden_dim: 16
+      n_halt_layers: 3
+      halt_scorer_type: endpoints
+      serial_halting: true
+    type: PathCombiningRouteGenerator
+  backbone_gn:
+    net_type: graph attn
+    kwargs:
+      n_layers: 5
+      in_node_dim: 4
+      in_edge_dim: 13
+      use_norm: false
+      n_heads: 4
+      dense: false
+n_samples: 100
+batch_size: 512

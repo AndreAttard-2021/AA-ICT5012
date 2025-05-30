@@ -1,0 +1,8 @@
+csv: true
+n_routes: 25
+min_route_len: 2
+max_route_len: 71
+dataset:
+  type: mumford
+  path: datasets/mumford_dataset/Instances
+  city: Southern_harbour_routes

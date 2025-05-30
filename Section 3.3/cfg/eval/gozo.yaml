@@ -1,0 +1,8 @@
+csv: true
+n_routes: 26
+min_route_len: 10
+max_route_len: 42
+dataset:
+  type: mumford
+  path: datasets/mumford_dataset/Instances
+  city: Gozo

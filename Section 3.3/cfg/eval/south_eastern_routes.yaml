@@ -1,0 +1,8 @@
+csv: true
+n_routes: 33
+min_route_len: 22
+max_route_len: 44
+dataset:
+  type: mumford
+  path: datasets/mumford_dataset/Instances
+  city: South_eastern_routes

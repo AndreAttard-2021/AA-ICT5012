@@ -1,0 +1,70 @@
+ppo:
+  n_iterations: 10
+  val_period: 10
+  n_epochs: 1
+  minibatch_size: 256
+  horizon: 120
+  epsilon: 0.2
+  use_gae: false
+  gae_lambda: 0.95
+discount_rate: 0.95
+diff_reward: true
+baseline_lr: 0.0005
+entropy_weight: 0.0
+batch_size: 256
+reward_scale: 1.0
+lr: 0.0016134816080499328
+decay: 0.0008404361781997002
+optimizer: Adam
+eval:
+  n_routes: 10
+  min_route_len: 2
+  max_route_len: 12
+dataset:
+  type: pickle
+  kwargs:
+    path: /content/drive/Othercomputers/My laptop/ICT5012 - Disseration/transit_learning-master/Generated_Graphs
+    space_scale: 0.6
+    demand_scale: 0.2
+experiment:
+  logdir: training_logs
+  anomaly: false
+  cpu: false
+  seed: 0
+  symmetric_routes: true
+  cost_function:
+    type: mine
+    kwargs:
+      mean_stop_time_s: 0
+      avg_transfer_wait_time_s: 300
+      demand_time_weight: 0.5
+      route_time_weight: 0.5
+      constraint_violation_weight: 5.0
+      variable_weights: true
+      pp_fraction: 0.33
+      op_fraction: 0.33
+model:
+  common:
+    dropout: 0.0
+    nonlin_type: ReLU
+    embed_dim: 64
+  route_generator:
+    kwargs:
+      force_linking_unlinked: false
+      logit_clip: null
+      n_nodepair_layers: 3
+      n_pathscorer_layers: 3
+      pathscorer_hidden_dim: 16
+      n_halt_layers: 3
+      halt_scorer_type: endpoints
+      serial_halting: true
+    type: PathCombiningRouteGenerator
+  backbone_gn:
+    net_type: graph attn
+    kwargs:
+      n_layers: 5
+      in_node_dim: 4
+      in_edge_dim: 13
+      use_norm: false
+      n_heads: 4
+      dense: false

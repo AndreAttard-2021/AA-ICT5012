@@ -1,0 +1,8 @@
+csv: true
+n_routes: 97
+min_route_len: 3
+max_route_len: 71
+dataset:
+  type: mumford
+  path: datasets/mumford_dataset/Instances
+  city: Malta

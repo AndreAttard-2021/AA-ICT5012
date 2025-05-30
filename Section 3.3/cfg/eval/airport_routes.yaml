@@ -1,0 +1,8 @@
+csv: true
+n_routes: 11
+min_route_len: 15
+max_route_len: 56
+dataset:
+  type: mumford
+  path: datasets/mumford_dataset/Instances
+  city: Airport_routes

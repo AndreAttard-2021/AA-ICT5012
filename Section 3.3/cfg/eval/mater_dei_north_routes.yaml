@@ -1,0 +1,8 @@
+csv: true
+n_routes: 16
+min_route_len: 29
+max_route_len: 56
+dataset:
+  type: mumford
+  path: datasets/mumford_dataset/Instances
+  city: Mater_dei_north_routes
